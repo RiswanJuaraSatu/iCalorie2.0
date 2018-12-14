@@ -25,6 +25,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".Users" />
     </application>
 
 </manifest>
