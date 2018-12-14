@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/homescreen" />
+
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:textColor="#ffffff"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:ems="10"
+        android:hint="email"
+        android:textColor="#ffffff"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/inputKatasandi"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:ems="10"
+        android:textColor="#ffffff"
+        android:hint="kata sandi"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textTanggalLahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/inputNama"
+        android:layout_alignLeft="@id/inputNama"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="TanggalLahir" />
+
+    <TextView
+        android:id="@+id/tanggalLahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/inputNama"
+        android:layout_alignLeft="@id/inputNama"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="230dp"
+        android:ems="7"
+        android:textColor="#ffffff"
+        android:text="pilihTanggal"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textTanggalLahir"
+        android:layout_alignLeft="@id/textTanggalLahir"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="275dp"
+        android:ems="10"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="JenisKelamin" />
+
+    <RadioGroup
+        android:id="@+id/rb_kelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="45dp">
+
+        <RadioButton
+            android:id="@+id/rbPria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:text="Pria" />
+
+        <RadioButton
+            android:id="@+id/rbWanita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:text="Wanita" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="57dp" />
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/rounded_button"
+        android:text="Sign up"
+        android:textColor="#ffffff" />
+</RelativeLayout>

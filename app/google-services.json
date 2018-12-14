@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693968182899",
+    "firebase_url": "https://icalorie.firebaseio.com",
+    "project_id": "icalorie",
+    "storage_bucket": "icalorie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693968182899:android:f220bcf3e6c86cbf",
+        "android_client_info": {
+          "package_name": "com.apps.riswanda.icalorie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693968182899-qofteo3qfdepugjvamnfrmld98bv5s9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.riswanda.icalorie",
+            "certificate_hash": "0f8c6b051db3b00e9c1ad5d96358929a50a57856"
+          }
+        },
+        {
+          "client_id": "693968182899-hc6ejq5bjaksid738815f6stu12dt4c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH9VXHL91z5lts20E6Dp43D6LqfVYb0lY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693968182899-hc6ejq5bjaksid738815f6stu12dt4c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
