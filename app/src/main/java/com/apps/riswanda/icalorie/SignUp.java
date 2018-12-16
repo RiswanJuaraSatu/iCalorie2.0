@@ -53,9 +53,7 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         mAuth = FirebaseAuth.getInstance();
-
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
-
         mProgess = new ProgressDialog(this);
 
         inputNama = (EditText) findViewById(R.id.inputNama);
@@ -167,7 +165,7 @@ public class SignUp extends AppCompatActivity {
 
                             mProgess.dismiss();
 
-                            Intent mainIntent = new Intent(SignUp.this, GetStarted.class);
+                            Intent mainIntent = new Intent(SignUp.this, MainActivity.class);
                             mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(mainIntent);
                         }

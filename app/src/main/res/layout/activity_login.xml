@@ -15,23 +15,27 @@
         android:src="@drawable/homescreen" />
 
     <EditText
+        android:id="@+id/inputEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
         android:layout_marginTop="174dp"
         android:text="Email"
+        android:inputType="textEmailAddress"
         android:textColor="#ffffff" />
 
     <EditText
+        android:id="@+id/inputKatasandi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
         android:layout_marginTop="236dp"
         android:text="Password"
+        android:inputType="textPassword"
         android:textColor="#ffffff" />
 
     <Button
-        android:id="@+id/btn_signUp"
+        android:id="@+id/btn_logIn"
         android:layout_width="133dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
