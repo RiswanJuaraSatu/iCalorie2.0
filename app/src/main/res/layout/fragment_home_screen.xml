@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/darkgradientbackground">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Berat Badan"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorWHite"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi Badan"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorWHite"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_lp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lingkar Perut"
+                android:inputType="numberDecimal"
+                android:textColor="@color/colorWHite"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/homescreen"
-        android:layout_centerInParent="true"
-        android:textSize="40dp"/>
+        android:background="@drawable/rounded_button"
+        android:text="Your Calorie"
+        android:textColor="@color/colorWHite"
+        android:onClick="btnCalculate"/>
+    
 
-</RelativeLayout>
+
+
+</LinearLayout>

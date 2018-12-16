@@ -75,10 +75,10 @@ public class SignUp extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int i) {
                 mGenderOption = mGender.findViewById(i);
                 switch (i) {
-                    case R.id.rbPria:
+                    case R.id.rbLk:
                         gender = mGenderOption.getText().toString();
                         break;
-                    case R.id.rbWanita:
+                    case R.id.rbPr:
                         gender = mGenderOption.getText().toString();
                         break;
                     default:

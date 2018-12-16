@@ -95,20 +95,20 @@
         android:layout_marginLeft="45dp">
 
         <RadioButton
-            android:id="@+id/rbPria"
+            android:id="@+id/rbLk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:text="Pria" />
+            android:text="Laki-laki" />
 
         <RadioButton
-            android:id="@+id/rbWanita"
+            android:id="@+id/rbPr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:text="Wanita" />
+            android:text="Perempuan" />
     </RadioGroup>
 
 
