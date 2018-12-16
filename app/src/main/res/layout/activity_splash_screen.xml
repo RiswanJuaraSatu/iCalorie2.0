@@ -4,15 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".SplashScreen">
+    android:background="@drawable/homescreen"
+    tools:context=".SplashScreen"
+    >
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:src="@drawable/homescreen2" />
+
 
 </RelativeLayout>
