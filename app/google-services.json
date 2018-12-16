@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "693968182899-g3uoidbm1l7264pak0g3p0cfgodce28o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.riswanda.icalorie",
+            "certificate_hash": "76bc33b7df473dbba9187579b38e5ca3db71d861"
+          }
+        },
+        {
           "client_id": "693968182899-hc6ejq5bjaksid738815f6stu12dt4c9.apps.googleusercontent.com",
           "client_type": 3
         }
