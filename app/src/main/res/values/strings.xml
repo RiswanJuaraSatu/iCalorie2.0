@@ -13,4 +13,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="homescreen">Home Screen</string>
     <string name="menu_makan">Menu Makan</string>
+    <string name="textProfile">Profile</string>
+    <string name="textPerhitungan">Perhitungan</string>
+    <string name="textMenuMakanan">Menu Makanan</string>
 </resources>

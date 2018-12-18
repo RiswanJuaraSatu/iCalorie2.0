@@ -165,7 +165,7 @@ public class SignUp extends AppCompatActivity {
 
                             mProgess.dismiss();
 
-                            Intent mainIntent = new Intent(SignUp.this, MainActivity.class);
+                            Intent mainIntent = new Intent(SignUp.this, HomeActivity.class);
                             mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(mainIntent);
                         }
