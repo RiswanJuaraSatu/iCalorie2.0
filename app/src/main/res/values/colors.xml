@@ -5,4 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="buttonColor">#e0891a</color>
     <color name="colorWHite">#fff</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
 </resources>

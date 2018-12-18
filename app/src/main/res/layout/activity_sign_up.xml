@@ -7,7 +7,6 @@
     tools:context=".SignUp"
     android:background="@drawable/homescreen">
 
-
     <EditText
         android:id="@+id/inputNama"
         android:layout_width="250dp"
@@ -55,7 +54,7 @@
         android:ems="10"
         android:textSize="18sp"
         android:textColor="#ffffff"
-        android:text="TanggalLahir" />
+        android:text="Tanggal Lahir" />
 
     <TextView
         android:id="@+id/tanggalLahir"
@@ -68,8 +67,8 @@
         android:layout_marginLeft="132dp"
         android:layout_marginTop="230dp"
         android:ems="7"
-        android:textColor="#ffffff"
-        android:text="pilihTanggal"
+        android:textColor="#fab259"
+        android:text="Pilih Tanggal"
         android:textSize="18sp" />
 
     <TextView
@@ -83,7 +82,7 @@
         android:ems="10"
         android:textSize="18sp"
         android:textColor="#ffffff"
-        android:text="JenisKelamin" />
+        android:text="Jenis Kelamin" />
 
     <RadioGroup
         android:id="@+id/rb_kelamin"
