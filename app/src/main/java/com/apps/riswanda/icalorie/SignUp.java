@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,17 +30,17 @@ import java.util.Calendar;
 
 public class SignUp extends AppCompatActivity {
 
-    String umur;
-    String gender;
+    private String umur;
+    private String gender;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private ProgressDialog mProgess;
 
     private Button btnSignup;
-    private EditText inputNama,inputEmail,inputKataSandi;
+    private EditText inputNama, inputEmail, inputKataSandi, inputBB, inlPing, inputTB;
+    private EditText inaktiv;
     private RadioGroup mGender;
     private RadioButton mGenderOption;
-
 
 
     private static final String TAG = "SignUp";
@@ -60,6 +61,9 @@ public class SignUp extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.inputEmail);
         inputKataSandi = (EditText) findViewById(R.id.inputKatasandi);
         mGender = findViewById(R.id.rb_kelamin);
+        inputBB = findViewById(R.id.ibb);
+        inputTB = findViewById(R.id.itb);
+        inlPing = findViewById(R.id.iLP);
         btnSignup = (Button) findViewById(R.id.btn_signUp);
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +89,7 @@ public class SignUp extends AppCompatActivity {
                 }
             }
         });
-        
+
         //pilih tanggal
         mDisplayDate = (TextView) (findViewById(R.id.tanggalLahir));
 
@@ -135,43 +139,45 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void startSignUp() {
-            final String nama = inputNama.getText().toString().trim();
-            final String email = inputEmail.getText().toString().trim();
-            final String katasandi = inputKataSandi.getText().toString().trim();
-            final String tanggal_lahir = mDisplayDate.getText().toString().trim();
+        final String nama = inputNama.getText().toString().trim();
+        final String email = inputEmail.getText().toString().trim();
+        final String katasandi = inputKataSandi.getText().toString().trim();
+        final String tanggal_lahir = mDisplayDate.getText().toString().trim();
+        final String tinggi = inputTB.getText().toString().trim();
+        final String berat = inputBB.getText().toString().trim() ;
+        final String lPing = inlPing.getText().toString().trim();
+        /*final String aktiv;*/
+        if (!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(katasandi)
+                && !TextUtils.isEmpty(tanggal_lahir)) {
 
-            if(!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(katasandi)
-                    && !TextUtils.isEmpty(tanggal_lahir)) {
 
-                String id =  mDatabase.push().getKey();
-                Users users = new Users(nama, email, katasandi, umur, gender,tanggal_lahir);
+            final Users user = new Users(nama,email,katasandi,umur,gender,tanggal_lahir,tinggi,berat,lPing/*, aktiv*/);
 
-                mProgess.setMessage("Signing Up ...");
-                mProgess.show();
-                mAuth.createUserWithEmailAndPassword(email,katasandi).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            String user_id = mAuth.getCurrentUser().getUid();
+            mProgess.setMessage("Signing Up ...");
+            mProgess.show();
+            mAuth.createUserWithEmailAndPassword(email, katasandi).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        String user_id = mAuth.getCurrentUser().getUid();
 
-                            DatabaseReference cureent_user_db = mDatabase.child(user_id);
+                        DatabaseReference cureent_user_db = mDatabase.child(user_id);
 
-                            cureent_user_db.child("nama").setValue(nama);
-                            cureent_user_db.child("email").setValue(email);
-                            cureent_user_db.child("katasandi").setValue(katasandi);
-                            cureent_user_db.child("jeniskelamin").setValue(gender);
-                            cureent_user_db.child("tanggal_lahir").setValue(tanggal_lahir);
-                            cureent_user_db.child("usia").setValue(umur);
+                        cureent_user_db.child("nama").setValue(user);
 
-                            mProgess.dismiss();
+                        mProgess.dismiss();
 
-                            Intent mainIntent = new Intent(SignUp.this, HomeActivity.class);
-                            mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            startActivity(mainIntent);
-                        }
+                        Intent mainIntent = new Intent(SignUp.this, HomeActivity.class);
+                        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(mainIntent);
+                    } else{
+                        mProgess.dismiss();
+                        Toast.makeText(SignUp.this,"Regritation Failed",Toast.LENGTH_LONG).show();
                     }
-                });
-            }
+                    //isExist
+                }
+            });
+        }
 
     }
 
