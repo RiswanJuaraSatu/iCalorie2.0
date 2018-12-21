@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -61,9 +62,9 @@ public class SignUp extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.inputEmail);
         inputKataSandi = (EditText) findViewById(R.id.inputKatasandi);
         mGender = findViewById(R.id.rb_kelamin);
-        inputBB = findViewById(R.id.ibb);
-        inputTB = findViewById(R.id.itb);
-        inlPing = findViewById(R.id.iLP);
+        inputBB = (EditText)findViewById(R.id.ibb);
+        inputTB = (EditText)findViewById(R.id.itb);
+        inlPing = (EditText)findViewById(R.id.iLP);
         btnSignup = (Button) findViewById(R.id.btn_signUp);
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -151,19 +152,22 @@ public class SignUp extends AppCompatActivity {
                 && !TextUtils.isEmpty(tanggal_lahir)) {
 
 
-            final Users user = new Users(nama,email,katasandi,umur,gender,tanggal_lahir,tinggi,berat,lPing/*, aktiv*/);
+            final Users user = new Users(nama,email,katasandi,umur,gender,tanggal_lahir,tinggi,berat,lPing);
 
             mProgess.setMessage("Signing Up ...");
             mProgess.show();
             mAuth.createUserWithEmailAndPassword(email, katasandi).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+
                         String user_id = mAuth.getCurrentUser().getUid();
 
                         DatabaseReference cureent_user_db = mDatabase.child(user_id);
 
-                        cureent_user_db.child("nama").setValue(user);
+                        cureent_user_db.setValue(user);
 
                         mProgess.dismiss();
 

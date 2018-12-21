@@ -3,9 +3,11 @@ package com.apps.riswanda.icalorie;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,17 +18,21 @@ import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private static final String TAG = "HomeActivity/";
+     FirebaseAuth mAuth;
     public ArrayList<aktivModel> CustomAktivList = new ArrayList<>();
 
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("https://icalorie.firebaseio.com/");
+    DatabaseReference ref = database.getReference();
 
-    private TextView nama, umur, tinggi, berat,kelamin, pinggang, aktivitas;
+    private TextView nama, umur, tinggi, berat,kelamin, pinggang, aktivitas,beratIdeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mAuth = FirebaseAuth.getInstance();
 
         nama = (TextView) findViewById(R.id.textNamaUser);
         umur = (TextView) findViewById(R.id.textUmurUser);
@@ -36,6 +42,10 @@ public class HomeActivity extends AppCompatActivity {
         pinggang = (TextView) findViewById(R.id.textLpUser);
         aktivitas = (TextView) findViewById(R.id.textAktivUser);
 
+        beratIdeal = (TextView)findViewById(R.id.textBbIdeal);
+
+
+
 
         userRetrieve();
 
@@ -44,19 +54,23 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void userRetrieve() {
-        DatabaseReference refUser = ref.child("Users");
+        String uID = mAuth.getCurrentUser().getUid();
+        Log.d(TAG, "userRetrieve: "+uID);
+        DatabaseReference refUser = ref.child("Users/"+uID);
 
         refUser.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Users user = dataSnapshot.getValue(Users.class);
+                Log.d(TAG, "onDataChange: "+ user.nama);
+
                 nama.setText(user.nama);
                 umur.setText(user.usia);
                 tinggi.setText(user.tinggi);
                 berat.setText(user.berat);
-                kelamin.setText(user.jeniskelamin);
+//                kelamin.setText(user.jeniskelamin);
                 pinggang.setText(user.lPinggang);
-                aktivitas.setText(user.aktiv);
+//                aktivitas.setText(user.aktiv);
             }
 
             @Override
@@ -65,4 +79,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+
+    //BeratBadan IDEAL
+
+    public void beratIdeal(){
+
+    }
+
+    //KADAR LEMAK
+
+
+
+
 }

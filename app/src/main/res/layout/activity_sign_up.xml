@@ -172,24 +172,24 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/aktiv_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/LP"
-            android:layout_alignLeft="@+id/inputNama"
-            android:layout_marginTop="8dp"
-            android:text="Aktivitas"
-            android:textSize="18sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/aktiv_label"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/LP"-->
+            <!--android:layout_alignLeft="@+id/inputNama"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:text="Aktivitas"-->
+            <!--android:textSize="18sp" />-->
 
-        <Spinner
-            android:id="@+id/aktiv"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/LP"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_toRightOf="@+id/aktiv_label"></Spinner>
+        <!--<Spinner-->
+            <!--android:id="@+id/aktiv"-->
+            <!--android:layout_width="160dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/LP"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_toRightOf="@+id/aktiv_label"></Spinner>-->
 
         <Button
             android:id="@+id/btn_signUp"
