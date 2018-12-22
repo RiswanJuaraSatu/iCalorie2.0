@@ -1,13 +1,13 @@
 package com.apps.riswanda.icalorie;
 
 public class Users {
-    String nama, email, katasandi, usia, jeniskelamin, tanggallahir, tinggi, berat, lPinggang;
+    String nama, email, katasandi, usia, jeniskelamin, tanggallahir, tinggi, berat, lPerut;
 
     public Users() {
 
     }
 
-    public Users(String nama, String email, String katasandi, String usia, String jeniskelamin, String tanggallahir, String tinggi,String berat, String lPinggang) {
+    public Users(String nama, String email, String katasandi, String usia, String jeniskelamin, String tanggallahir, String tinggi,String berat, String lPerut) {
         this.nama = nama;
         this.email = email;
         this.katasandi = katasandi;
@@ -16,8 +16,8 @@ public class Users {
         this.tanggallahir = tanggallahir;
         this.tinggi = tinggi;
         this.berat = berat;
-        this.lPinggang = lPinggang;
-//        this.aktiv = aktiv;
+        this.lPerut = lPerut;
+
     }
 
     public String getNama() {
@@ -28,13 +28,9 @@ public class Users {
         return tinggi;
     }
 
-    public String getlPinggang() {
-        return lPinggang;
+    public String getlPerut() {
+        return lPerut;
     }
-
-//    public String getAktiv() {
-//        return aktiv;
-//    }
 
     public String getBerat() {
         return berat;

@@ -10,83 +10,89 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#cc000000">
 
-
-        <EditText
-            android:id="@+id/inputNama"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tlNama"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:ems="10"
-            android:hint="Nama"
-            android:inputType="textPersonName"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="20dp">
 
-        <EditText
-            android:id="@+id/inputEmail"
+            <EditText
+                android:id="@+id/inputNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nama"
+                android:inputType="textPersonName"
+                android:textColor="#ffffff" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tlEmail"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@id/tlNama"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="85dp"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="8dp">
 
-        <EditText
-            android:id="@+id/inputKatasandi"
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColor="#ffffff" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tlPass"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@id/tlEmail"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="145dp"
-            android:ems="10"
-            android:hint="Kata Sandi"
-            android:inputType="textPassword"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="8dp">
 
-        <TextView
-            android:id="@+id/textTanggalLahir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/inputNama"
-            android:layout_alignLeft="@id/inputNama"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="200dp"
-            android:ems="10"
-            android:text="Tanggal Lahir"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
+            <EditText
+                android:id="@+id/inputKatasandi"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Kata Sandi"
+                android:inputType="textPassword"
+                android:textColor="#ffffff" />
+        </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tanggalLahir"
-            android:layout_width="wrap_content"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tlDOB"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/inputNama"
-            android:layout_alignLeft="@id/inputNama"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="132dp"
-            android:layout_marginLeft="132dp"
-            android:layout_marginTop="200dp"
-            android:ems="7"
-            android:text="Pilih Tanggal"
-            android:textColor="#fab259"
-            android:textSize="18sp" />
+            android:layout_below="@id/tlPass"
+            android:layout_alignLeft="@id/tlPass">
+
+            <EditText
+                android:id="@+id/tanggalLahirE"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="Tanggal Lahir" />
+        </android.support.design.widget.TextInputLayout>
+
 
         <TextView
             android:id="@+id/textJenisKelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textTanggalLahir"
-            android:layout_alignLeft="@id/textTanggalLahir"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="245dp"
+            android:layout_alignStart="@+id/tlNama"
+            android:layout_alignLeft="@id/tlNama"
+            android:layout_below="@id/tlDOB"
+            android:layout_marginTop="8dp"
             android:ems="10"
+            android:padding="5dp"
             android:text="Jenis Kelamin"
             android:textColor="#ffffff"
             android:textSize="18sp" />
@@ -95,8 +101,8 @@
             android:id="@+id/rb_kelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="270dp"
+            android:layout_below="@id/textJenisKelamin"
+            android:layout_alignLeft="@id/tlNama"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -122,7 +128,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rb_kelamin"
-            android:layout_alignLeft="@+id/inputNama"
+            android:layout_alignLeft="@+id/tlNama"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="1dp">
 
@@ -142,7 +148,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/bb"
-            android:layout_alignLeft="@+id/inputNama"
+            android:layout_alignLeft="@+id/tlNama"
             android:layout_marginTop="8dp">
 
             <EditText
@@ -160,44 +166,44 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tb"
-            android:layout_alignLeft="@+id/inputNama"
+            android:layout_alignLeft="@+id/tlNama"
             android:layout_marginTop="8dp">
 
             <EditText
                 android:id="@+id/iLP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Lingkar Pinggang"
+                android:hint="Lingkar Perut"
                 android:inputType="numberDecimal" />
 
         </android.support.design.widget.TextInputLayout>
 
         <!--<TextView-->
-            <!--android:id="@+id/aktiv_label"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@+id/LP"-->
-            <!--android:layout_alignLeft="@+id/inputNama"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:text="Aktivitas"-->
-            <!--android:textSize="18sp" />-->
+        <!--android:id="@+id/aktiv_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/LP"-->
+        <!--android:layout_alignLeft="@+id/inputNama"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="Aktivitas"-->
+        <!--android:textSize="18sp" />-->
 
         <!--<Spinner-->
-            <!--android:id="@+id/aktiv"-->
-            <!--android:layout_width="160dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@id/LP"-->
-            <!--android:layout_marginLeft="16dp"-->
-            <!--android:layout_marginTop="8dp"-->
-            <!--android:layout_toRightOf="@+id/aktiv_label"></Spinner>-->
+        <!--android:id="@+id/aktiv"-->
+        <!--android:layout_width="160dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/LP"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_toRightOf="@+id/aktiv_label"></Spinner>-->
 
         <Button
             android:id="@+id/btn_signUp"
             android:layout_width="133dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@id/LP"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button"
             android:text="Sign up"
             android:textColor="#ffffff" />
