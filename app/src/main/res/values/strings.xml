@@ -9,11 +9,21 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="homescreen">Home Screen</string>
-    <string name="menu_makan">Menu Makan</string>
-    <string name="textProfile">PROFILE</string>
-    <string name="textPerhitungan">PERHITUNGAN</string>
-    <string name="textMenuMakanan">MENU MAKANAN</string>
+    <string name="profile">Profile</string>
+    <string name="umur">Umur</string>
+    <string name="nama">Nama</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="lingkar_pinggang">Lingkar Pinggang</string>
+    <string name="aktivitas">Aktivitas</string>
+    <string name="perhitungan">Perhitungan</string>
+    <string name="bbideal">Berat Badan Ideal</string>
+    <string name="kalori_harian">Kalori Harian</string>
+    <string name="kadar_lemak">Kadar Lemak</string>
+    <string name="menu_makanan">Menu Makanan</string>
+    <string name="menu_sarapan">Menu Sarapan</string>
+    <string name="menu_makan_siang">Menu Makan Siang</string>
+    <string name="menu_makan_malam">Menu Makan Malam</string>
+    <string name="status_gizi">Status Gizi</string>
 </resources>
