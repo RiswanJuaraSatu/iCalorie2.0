@@ -228,7 +228,7 @@ public class HomeActivity extends AppCompatActivity {
                     } else if (kadarLemak.equals("RENDAH") && jk.equals("Perempuan")) {
                         sumPRLR += 1;
                     }
-                }//end for
+                }
 
                 // tinggi badan
                 meanTBST = sumTBLST / totalSangatTinggi;
