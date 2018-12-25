@@ -434,6 +434,7 @@ public class HomeActivity extends AppCompatActivity {
         return 1 * Math.pow(Math.E, expo) / bawah;
     }
 
+
     //Expandable Menu Makanan
 
     /*public void tampilMakanMalam(View view) {
