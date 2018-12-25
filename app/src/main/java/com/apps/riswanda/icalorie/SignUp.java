@@ -247,6 +247,7 @@ public class SignUp extends AppCompatActivity {
                         mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(mainIntent);
                     } else {
+                        Toast.makeText(SignUp.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();
 
                     }
                 }
