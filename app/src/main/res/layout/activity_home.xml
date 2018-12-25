@@ -239,13 +239,14 @@
                 app:ael_orientation="vertical">
 
                 <TextView
-                    android:onClick="tampilSarapan"
+
                     android:id="@+id/textSarapan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/expandSarapan"
                     android:text="@string/menu_sarapan"
                     android:textSize="20sp" />
+                <!--android:onClick="tampilSarapan"-->
                 <TextView
                     android:id="@+id/listSarapan"
                     android:layout_width="wrap_content"
@@ -256,8 +257,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="Sayur"/>
+                    android:paddingEnd="32dp" />
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
@@ -271,13 +271,13 @@
                 app:ael_interpolator="bounce"
                 app:ael_orientation="vertical">
                 <TextView
-                    android:onClick="tampilMakanSiang"
                     android:id="@+id/textMakanSiang"
                     android:layout_below="@+id/expandMakanSiang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/menu_makan_siang"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
+                <!--android:onClick="tampilMakanSiang"-->/>
                 <TextView
                     android:id="@+id/listMakanSiang"
                     android:layout_below="@id/textMakanSiang"
@@ -288,8 +288,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="Sayur"/>
+                    android:paddingEnd="32dp" />
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
             <!--Menu Makan Malam-->
@@ -302,13 +301,14 @@
                 app:ael_interpolator="bounce"
                 app:ael_orientation="vertical">
                 <TextView
-                    android:onClick="tampilMakanMalam"
+
                     android:id="@+id/textMakanMalam"
                     android:layout_below="@id/listMakanSiang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/menu_makan_malam"
                     android:textSize="20sp" />
+                <!--android:onClick="tampilMakanMalam"-->
                 <TextView
                     android:id="@+id/listMakanMalam"
                     android:layout_below="@id/textMakanMalam"
@@ -319,8 +319,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingStart="32dp"
-                    android:paddingEnd="32dp"
-                    android:text="Sayur"/>
+                    android:paddingEnd="32dp" />
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 

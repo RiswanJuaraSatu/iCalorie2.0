@@ -4,9 +4,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.firebase.client.Firebase;
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,6 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
+
+   // ExpandableRelativeLayout tampilSarapan, tampilMakanSiang, tampilMakanMalam;
+
     Double nR,nN,nT,nST,tb, bbideal = 0.0;
 
     private static final String TAG = "HomeActivity/";
@@ -175,5 +180,20 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    //Expandable Menu Makanan
 
+    /*public void tampilMakanMalam(View view) {
+        tampilMakanMalam = (ExpandableRelativeLayout) findViewById(R.id.expandMakanMalam);
+        tampilMakanMalam.expand();
+    }
+
+    public void tampilMakanSiang(View view) {
+        tampilMakanSiang = (ExpandableRelativeLayout) findViewById(R.id.expandMakanSiang);
+        tampilMakanSiang.expand();
+    }
+
+    public void tampilSarapan(View view) {
+        tampilSarapan = (ExpandableRelativeLayout) findViewById(R.id.expandSarapan);
+        tampilSarapan.expand();
+    }*/
 }
