@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity {
         umur = (TextView) findViewById(R.id.textUmurUser);
         tinggi = (TextView) findViewById(R.id.textTinggiUser);
         berat = (TextView) findViewById(R.id.textBeratUser);
-        kelamin = (TextView) findViewById(R.id.textJenisKelamin);
+        kelamin = (TextView) findViewById(R.id.textKelaminUser);
         pinggang = (TextView) findViewById(R.id.textLpUser);
         aktivitas = (TextView) findViewById(R.id.textAktivUser);
 
